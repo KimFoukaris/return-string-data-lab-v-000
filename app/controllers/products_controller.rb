@@ -11,7 +11,7 @@ class ProductsController < ApplicationController
 
   def inventory
     product = Product.find(params[:id])
-    available = (product > 0 ? true : false)
+    available = (product.inventory > 0 ? true : false)
     return available
   end
 
