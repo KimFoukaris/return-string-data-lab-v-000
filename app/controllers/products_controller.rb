@@ -23,7 +23,7 @@ class ProductsController < ApplicationController
     set_product
     availability = (@product.inventory > 0 ? "true" : "false")
     result = (@product.inventory > 0 ? "Available" : "Sold Out")
-    render plain: result
+    render plain: availability + result
   end
 
   private
