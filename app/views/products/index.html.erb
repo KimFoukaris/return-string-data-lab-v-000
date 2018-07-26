@@ -16,7 +16,7 @@ $(function () {
     $.get("/products/" + id + "/inventory", function(data) {
       if (data === "true") {
         result = "Available"
-      } else { 
+      } else {
         result = "Sold Out"
       };
       $("#inventory-" + id).text(result);
