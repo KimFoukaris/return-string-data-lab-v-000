@@ -9,9 +9,10 @@ class ProductsController < ApplicationController
       render plain: product.description
     end
 
-    def body
-    post = Post.find(params[:id])
-    render plain: post.description
+  def inventory
+    product = Product.find(params[:id])
+    available = (product > 0 ? true : false);
+    return available
   end
 
 end
